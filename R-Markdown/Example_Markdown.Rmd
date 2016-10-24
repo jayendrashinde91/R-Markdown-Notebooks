@@ -1,0 +1,37 @@
+---
+title: "Example"
+author: "Jayendra Shinde"
+date: "October 15, 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r sine_cos}
+t <- seq(0,0.98,0.01)
+y1 <- sin(2*pi*4*t)
+y2 <- cos(2*pi*4*t)
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r sine_cos_p, echo=FALSE}
+plot(t,y1,type = "l",col="blue",ylab = "value",xlab = "time")
+par(new=TRUE)
+plot(t,y2,type = "l",col="red",ylab = "",xlab = "")
+
+```
+![spectra](https://github.com/jayendrashinde91/R-Markdown/blob/master/images/plot.png)
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
